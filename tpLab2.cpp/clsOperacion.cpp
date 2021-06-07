@@ -14,10 +14,7 @@ using namespace std;
 #include "funciones.h"
 #include "menuVehiculos.h"
 
-#include "clsPersona.h"
-#include "clsVendedor.h"
-#include "clsCliente.h"
-#include "clsVehiculo.h"
+
 
 void Operacion::setIdOperacion(const float idOperacion){this->idOperacion=idOperacion;}
 void Operacion::setMonto(const float monto){this->monto=monto;}
@@ -53,8 +50,15 @@ void Operacion::Cargar(){
     cout <<"Ingrese el monto de la venta: ";
     cin >> monto;"\n";
     monto=validateMonto(monto);
-    cout <<"Ingrese el dominio del vehiculo: ";
-    cargarCadena(dominioVehiculo,8);"\n";
+cout <<"Ingrese el dominio del vehiculo: ";
+int val;
+    cargarCadena(dominioVehiculo,7);"\n";
+    val=validateDominio(dominioVehiculo,7);
+    while(val!=0){
+        cout <<"Ingrese el dominio del vehiculo: ";
+        cargarCadena(dominioVehiculo,7);"\n";
+        val=validateDominio(dominioVehiculo,7);
+    }
     // TODO: Pensar validacion para dominios
     cout <<"Ingrese la fecha de inicio de la venta: ";
     cout <<endl;

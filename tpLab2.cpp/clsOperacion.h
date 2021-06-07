@@ -3,6 +3,10 @@
 
 
 #include "clsFecha.h"
+#include "clsPersona.h"
+#include "clsVendedor.h"
+#include "clsCliente.h"
+#include "clsVehiculo.h"
 class Operacion
 {
     private:
@@ -11,7 +15,7 @@ class Operacion
     int idVehiculo;
     int dniVendedor;
     int dniCliente;
-    char dominioVehiculo[8];
+    char dominioVehiculo[7];
     Fecha fechaDeInicio;
     Fecha fechaDeFin;
     bool ventaCompleta;

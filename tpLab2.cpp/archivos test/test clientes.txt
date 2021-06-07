@@ -1,0 +1,50 @@
+43434343
+Lucas
+Sosa
+Esquiu 100
+Tigre
+lucas@prueba.com
+1111111111
+1745
+16
+7
+1994
+
+
+42445030
+Santiago
+Benitez
+Williams 200
+Tigre
+santi@prueba.com
+1134008752
+1646
+22
+7
+1999
+
+
+37445030
+Matías
+Juarez
+Carlos Gardel 100
+Tigre
+mati@prueba.com
+1134008752
+1646
+15
+6
+1998
+
+
+18445030
+Claudia
+Baldi
+Esquiu 400
+Pacheco
+clau@prueba.com
+1134008752
+1646
+15
+6
+1998

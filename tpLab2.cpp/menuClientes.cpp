@@ -12,12 +12,7 @@ using namespace rlutil;
 #include "menuClientes.h"
 #include "validations.h"
 
-#include "clsFecha.h"
-#include "clsPersona.h"
-#include "clsVendedor.h"
-#include "clsCliente.h"
-#include "clsVehiculo.h"
-#include "clsOperacion.h"
+
 
 enum MENU_CLIENTES{
       OPCION_SALIR_DE_MENUCLIENTES,

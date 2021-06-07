@@ -8,6 +8,8 @@ int validateDia(int,int,int);
 int validateMes(int,int);
 int validateAnio(int);
 
+//validacion patente
+int validateDominio(char *dominioVehiculo, int numcadena);
 
 // Validaciones en clase Persona
 

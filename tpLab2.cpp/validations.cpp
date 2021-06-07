@@ -8,13 +8,13 @@ using namespace std;
 #include <cstring>
 #include <ctime>
 
-
+#include "clsVendedor.h"
+#include "clsVehiculo.h"
 #include "clsCliente.h"
 #include "clsOperacion.h"
 #include "validations.h"
 #include "rlutil.h"
-#include "clsVendedor.h"
-#include "clsVehiculo.h"
+
 using namespace rlutil;
 
 
@@ -362,6 +362,32 @@ int validateVendedorExiste(int dniVendedor){
             return regVendedor.getDni();
     }
     return dniVendedor;
+}
+
+
+int validateDominio(char *dominioVehiculo, int numcadena){
+int i;
+for(i=0;i<numcadena;i++){
+        if(i==0 || i==1){
+            if(isalpha(dominioVehiculo[i])==false){
+                cout<<"ERROR EN LOS PRIMEROS DOS DIGITOS, LOS CUALES DEBERIAN SER LETRAS"<<endl;
+                return 1;
+            }
+        }
+        if(i==2 || i==3 || i==4){
+            if(isdigit(dominioVehiculo[i])==false){
+                cout<<" ERROR LOS TRES DIGITOS DEL MEDIO, LOS CUALES DEBERIAN SER NUMEROS"<<endl;
+                return 1;
+            }
+        }
+        if(i==5 || i==6){
+            if(isalpha(dominioVehiculo[i])==false){
+                cout<<" ERROR EN LOS ULTIMOS DOS DIGITOS, LOS CUALES DEBERIAN SER LETRAS"<<endl;
+                return 1;
+            }
+        }
+}
+return 0;
 }
 
 #endif // VALIDATIONS_CPP_INCLUDED

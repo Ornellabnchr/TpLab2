@@ -19,6 +19,8 @@ using namespace std;
 #include "menuVehiculos.h"
 #include "menuReportes.h"
 
+
+
 enum MENU_MAIN{
       OPCION_SALIR,
       OPCION_VENTAS,

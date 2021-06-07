@@ -1,0 +1,55 @@
+41395030
+Facundo
+Jannello
+Esquiu 400
+Tigre
+facu@prueba.com
+1134008752
+1646
+15
+6
+1998
+70000
+30
+
+42445030
+Ornella
+Banchero
+Esquiu 100
+Tigre
+orne@prueba.com
+1111111111
+1646
+15
+6
+1998
+63000
+32
+
+37445030
+Carlos
+Tevez
+Av Italia 222
+Tigre
+carlitos@prueba.com
+1134008752
+1646
+14
+4
+1990
+55000
+22
+
+18445030
+Gerardo
+Omanyer
+Av Santa Fe 4242
+CABA
+gerardo@prueba.com
+1134008752
+1646
+15
+1
+2000
+50000
+30
