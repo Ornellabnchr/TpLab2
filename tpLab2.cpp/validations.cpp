@@ -350,7 +350,7 @@ int validateClienteExiste(int dniCliente){
 }
 
 int validateVendedorExiste(int dniVendedor){
-    Cliente regVendedor;
+    Vendedor regVendedor;
     int pos=regVendedor.buscarPosEnDisco(dniVendedor);
     if (pos==-1){
             cout<<endl<<endl<<"El vendedor no existe.";
