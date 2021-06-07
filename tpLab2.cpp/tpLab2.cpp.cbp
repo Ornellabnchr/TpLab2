@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="tpLab2.cpp" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/tpLab2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/tpLab2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="clsCliente.cpp" />
+		<Unit filename="clsCliente.h" />
+		<Unit filename="clsFecha.cpp" />
+		<Unit filename="clsFecha.h" />
+		<Unit filename="clsOperacion.cpp" />
+		<Unit filename="clsOperacion.h" />
+		<Unit filename="clsPersona.cpp" />
+		<Unit filename="clsPersona.h" />
+		<Unit filename="clsVehiculo.cpp" />
+		<Unit filename="clsVehiculo.h" />
+		<Unit filename="clsVendedor.cpp" />
+		<Unit filename="clsVendedor.h" />
+		<Unit filename="funciones.cpp" />
+		<Unit filename="funciones.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="menuClientes.cpp" />
+		<Unit filename="menuClientes.h" />
+		<Unit filename="menuReportes.cpp" />
+		<Unit filename="menuReportes.h" />
+		<Unit filename="menuVehiculos.cpp" />
+		<Unit filename="menuVehiculos.h" />
+		<Unit filename="menuVendedores.cpp" />
+		<Unit filename="menuVendedores.h" />
+		<Unit filename="menuVentas.cpp" />
+		<Unit filename="menuVentas.h" />
+		<Unit filename="validations.cpp" />
+		<Unit filename="validations.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
