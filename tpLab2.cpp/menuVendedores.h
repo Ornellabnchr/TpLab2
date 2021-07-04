@@ -12,6 +12,7 @@
 void listarVendedores();
 void buscarVendedor();
 void eliminarVendedor(int dni);
+void actualizarSueldoVendedor(int dni);
 int cantDeVendedores();
 void changeVendedorPapelera(int pos);
 int menuVendedores();

@@ -14,6 +14,7 @@ enum MENU_VENDEDORES{
       OPCION_CARGAR_VENDEDOR,
       OPCION_LISTADO_VENDEDORES,
       OPCION_BUSCAR_VENDEDOR,
+      OPCION_ACTUALIZAR_SUELDO,
       OPCION_CAMBIAR_PAPELERA_VENDEDOR,
       OPCION_BORRAR_VENDEDOR
 };
@@ -28,8 +29,9 @@ int menuVendedores(){
       cout << "1. Cargar vendedor" << endl;
       cout << "2. Ver listado de vendedores" << endl;
       cout << "3. Buscar vendedor por DNI" << endl;
-      cout << "4. Borrar/Recuperar vendedor de Papelera de reciclaje"<< endl;
-      cout << "5. Borrar un vendedor de forma permanente"<< endl;
+      cout << "4. Actualizar sueldo de vendedores" << endl;
+      cout << "5. Borrar/Recuperar vendedor de Papelera de reciclaje"<< endl;
+      cout << "6. Borrar un vendedor de forma permanente"<< endl;
       cout << "0. Volver al menu anterior" << endl;
       cout << "- SELECCIONE UNA OPCION: - " << endl;
       cout << "-------------------------" << endl;
@@ -57,6 +59,18 @@ int menuVendedores(){
                 cout<<"------------------------------------------------------------------------" <<endl;
                 buscarVendedor();
                 break;
+        case OPCION_ACTUALIZAR_SUELDO:
+               {
+                cout<<"------------------------------------------------------------------------" <<endl;
+                cout<<"------------------ACTUALIZAR SUELDO -------------------------------------"<<endl;
+                cout<<"------------------------------------------------------------------------" <<endl;
+                int dni;
+                cout<< "Ingrese el dni del vendedor: ";
+                cin>>dni;
+                cout<<endl;
+                actualizarSueldoVendedor(dni);
+               }
+        break;
         case OPCION_CAMBIAR_PAPELERA_VENDEDOR:
                 {
                      cout<<"------------------------------------------------------------------------" <<endl;
@@ -77,14 +91,16 @@ int menuVendedores(){
 
                 }
         case OPCION_BORRAR_VENDEDOR:
-                cout<<"------------------------------------------------------------------------" <<endl;
-                cout<<"------------------ELIMINAR UN VENDEDOR PERMANENTEMENTE-----------------"<<endl;
-                cout<<"------------------------------------------------------------------------" <<endl;
-                int dni;
-                cout<<"Ingrese el DNI del vendedor a eliminar: ";
-                cin>>dni;
-                eliminarVendedor(dni);
-                break;
+                 {
+                    cout<<"------------------------------------------------------------------------" <<endl;
+                    cout<<"------------------ELIMINAR UN VENDEDOR PERMANENTEMENTE-----------------"<<endl;
+                    cout<<"------------------------------------------------------------------------" <<endl;
+                    int dni;
+                    cout<<"Ingrese el DNI del vendedor a eliminar: ";
+                    cin>>dni;
+                    eliminarVendedor(dni);
+                    break;
+                }
         case OPCION_SALIR_DE_MENUVENDEDORES:
                 return 0;
                 break;
@@ -254,6 +270,25 @@ int cantDeVendedores(){
       cant=ftell(p)/(sizeof (Vendedor));
       return cant;
 }
+
+
+void actualizarSueldoVendedor(int dni){
+     int pos;
+     float porcentajeAumento,nuevoSueldo;
+     Vendedor regVendedor;
+     pos=regVendedor.buscarPosEnDisco(dni);
+     bool leyo = regVendedor.leerDeDisco(pos);
+     if (leyo == false) return;
+     cout<<"\n\n"<<"El/la vendedor/a "<< regVendedor.getNombre() << regVendedor.getApellido() << " actualmente gana $"<<regVendedor.getSueldoBruto();
+     cout<<endl<<"Ingrese el porcentaje de sueldo que desea aumentarle: ";
+     cin>>porcentajeAumento;
+     nuevoSueldo= regVendedor.getSueldoBruto()+(porcentajeAumento*regVendedor.getSueldoBruto()/float(100));
+     regVendedor.setSueldoBruto(nuevoSueldo);
+     bool escribio=regVendedor.grabarEnDisco(pos);
+     if (escribio==false) return;
+     cout<<endl<<"Ingresado con exito. Nuevo sueldo $"<<nuevoSueldo;
+
+};
 
 
 #endif // MENUVENDEDORES_CPP_INCLUDED

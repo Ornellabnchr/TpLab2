@@ -14,4 +14,5 @@ void cargarCadena(char *pal, int tam){
   fflush(stdin);
 }
 
+
 #endif // FUNCIONES_CPP_INCLUDED
