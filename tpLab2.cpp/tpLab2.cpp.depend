@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1625404409 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clscliente.cpp
+1625413148 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clscliente.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -39,7 +39,7 @@
 	"validations.h"
 	"clsFecha.h"
 
-1625404409 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsoperacion.cpp
+1625424187 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsoperacion.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -126,7 +126,7 @@
 	"clsVehiculo.h"
 	"clsOperacion.h"
 
-1625404409 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.h
+1625421835 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.h
 
 1625410977 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuclientes.cpp
 	<iostream>

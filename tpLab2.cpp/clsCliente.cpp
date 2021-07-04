@@ -6,10 +6,10 @@ using namespace std;
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
-
 #include "clsCliente.h"
 #include "validations.h"
 #include "clsOperacion.h"
+
 void Cliente::Mostrar(){
     if (estado==true){
             Persona::Mostrar();

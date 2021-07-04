@@ -3,6 +3,7 @@
 
 int menuReportes();
 void ventasPorMes(int,int);
+void mostrarVentasPorMes(int,int);
 char* getNombreDeMes(int);
 int getIndexAnio(int);
 

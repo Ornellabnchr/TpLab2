@@ -50,8 +50,8 @@ void Operacion::Cargar(){
     cout <<"Ingrese el monto de la venta: ";
     cin >> monto;"\n";
     monto=validateMonto(monto);
-cout <<"Ingrese el dominio del vehiculo: ";
-int val;
+    cout <<"Ingrese el dominio del vehiculo: ";
+    int val;
     cargarCadena(dominioVehiculo,7);"\n";
     val=validateDominio(dominioVehiculo,7);
     while(val!=0){
@@ -59,7 +59,6 @@ int val;
         cargarCadena(dominioVehiculo,7);"\n";
         val=validateDominio(dominioVehiculo,7);
     }
-    // TODO: Pensar validacion para dominios
     cout <<"Ingrese la fecha de inicio de la venta: ";
     cout <<endl;
     fechaDeInicio.Cargar();"\n";

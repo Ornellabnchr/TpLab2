@@ -2,13 +2,15 @@
 #define MENUREPORTES_CPP_INCLUDED
 
 #include <iostream>
-using namespace std;
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
+#include <iomanip>
+using namespace std;
 
 #include "clsOperacion.h"
 #include "menuReportes.h"
+#include "validations.h"
 
 enum MENU_REPORTES{
       OPCION_SALIR_DE_MENUREPORTES,
@@ -42,6 +44,7 @@ int menuReportes(){
                        cin>>anio; "\n";
                  }
                  ventasPorMes(anio, indexAnio);
+                 // TODO: Falta Función exportar como CSV
                  break;
                 }
         case OPCION_SALIR_DE_MENUREPORTES:
@@ -77,8 +80,44 @@ void ventasPorMes(int anio,int indexAnio){
     for (int i=0;i<12;i++){
         cout<< getNombreDeMes(i+1) << ": "<<ventasMeses[i][indexAnio]<<endl;
     }
+    fclose(p);
+    cout<<endl<<endl;
+    cout<<"Ingrese numero de mes para ver el detalle o 0 (cero) para salir: ";
+    int rta;
+    cin >> rta;
+    if (rta==0) return;
+    rta = validateMes(rta,anio);
+    system("cls");
+    mostrarVentasPorMes(rta,anio);
+}
 
 
+void mostrarVentasPorMes(int mes,int anio){
+    Operacion regOperacion;
+    Cliente regCliente;
+    Vendedor regVendedor;
+    Vehiculo regVehiculo;
+    FILE *p;
+    p=fopen("Operaciones.dat","rb");
+    cout<<setw(5)<<"ID"<<setw(31)<<"Apellido del cliente"<<setw(31)<<"Apellido del vendedor"<<setw(10)<<"Monto"<<setw(15)<<"Marca"<<setw(20)<<"Modelo"<<endl;
+    while (fread(&regOperacion, sizeof (Operacion),1,p) == 1){
+        if (regOperacion.getFechaDeFin().getAnio()==anio && regOperacion.getFechaDeFin().getMes() == mes){
+           cout<<setw(5)<<regOperacion.getIdOperacion();
+           int pos;
+           pos=regCliente.buscarPosEnDisco(regOperacion.getDniCliente());
+           regCliente.leerDeDisco(pos);
+           cout<<setw(31)<<regCliente.getApellido();
+           pos=regVendedor.buscarPosEnDisco(regOperacion.getDniVendedor());
+           regVendedor.leerDeDisco(pos);
+           cout<<setw(31)<<regVendedor.getApellido();
+           cout<<setw(10)<<"$"<<regOperacion.getMonto();
+           pos=regVehiculo.buscarPosEnDisco(regOperacion.getIdVehiculo());
+           regVehiculo.leerDeDisco(pos);
+           cout<<setw(15)<<regVehiculo.getMarca();
+           cout<<setw(20)<<regVehiculo.getModelo();
+        }
+    }
+    fclose(p);
 }
 
 char* getNombreDeMes(int nroDeMes){
