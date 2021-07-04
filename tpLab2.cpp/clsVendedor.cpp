@@ -42,7 +42,7 @@ void Vendedor::Mostrar(){
             Persona::Mostrar();
             cout<<"Sueldo bruto: "<<sueldoBruto <<"$"<<endl;
             cout<<"Porcentaje de comision actual: "<<comisionPorcentaje <<"%"<<endl;
-            cout<<"Cantidad de ventas realizadas: "<<Vendedor::calculateCantVentasRealizadas(dni);
+            cout<<"Cantidad de ventas realizadas: "<<Vendedor::calculateCantVentasRealizadas();
             cout<<endl;
     }
     else return;
@@ -109,7 +109,7 @@ bool Vendedor::grabarEnDisco(const int pos){
 
 
 
-int Vendedor::calculateCantVentasRealizadas(const int dni){
+int Vendedor::calculateCantVentasRealizadas(){
    Operacion regOperacion;
    int cantVentas=0;
    FILE *p;

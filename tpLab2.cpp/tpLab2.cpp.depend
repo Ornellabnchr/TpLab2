@@ -26,7 +26,7 @@
 	"clsCliente.h"
 	"clsVehiculo.h"
 
-1625404409 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsvendedor.h
+1625428114 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsvendedor.h
 	"clsPersona.h"
 
 1625404409 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsvehiculo.h
@@ -81,7 +81,7 @@
 	"clsVehiculo.h"
 	"funciones.h"
 
-1625410512 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsvendedor.cpp
+1625428127 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsvendedor.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -126,7 +126,7 @@
 	"clsVehiculo.h"
 	"clsOperacion.h"
 
-1625421835 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.h
+1625426640 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.h
 
 1625410977 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuclientes.cpp
 	<iostream>
@@ -151,13 +151,16 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1625404409 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.cpp
+1625428021 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	<cstring>
+	<iomanip>
 	"clsOperacion.h"
+	"menuVendedores.h"
 	"menuReportes.h"
+	"validations.h"
 
 1625404409 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuvehiculos.cpp
 	<iostream>

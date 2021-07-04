@@ -18,7 +18,7 @@ class Vendedor:public Persona{
         int buscarPosEnDisco(const int);
         bool leerDeDisco(const int);
         bool grabarEnDisco(const int);
-        int calculateCantVentasRealizadas(const int);
+        int calculateCantVentasRealizadas();
 
 };
 

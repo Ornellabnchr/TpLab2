@@ -9,12 +9,14 @@
 using namespace std;
 
 #include "clsOperacion.h"
+#include "menuVendedores.h"
 #include "menuReportes.h"
 #include "validations.h"
 
 enum MENU_REPORTES{
       OPCION_SALIR_DE_MENUREPORTES,
-      OPCION_MOSTRAR_REPORTE_VENTAS
+      OPCION_MOSTRAR_REPORTE_VENTAS,
+      OPCION_RANKING_VENDEDORES,
 };
 int menuReportes(){
   setlocale(LC_ALL, "Spanish");
@@ -24,6 +26,7 @@ int menuReportes(){
       cout << "-----MENU REPORTES-----" << endl;
       cout << "-------------------------" << endl;
       cout << "1. Reporte de ventas mes a mes" << endl;
+      cout << "2. Ranking de Vendedores" << endl;
       cout << "0. Volver al menu anterior" << endl;
       cout << "- SELECCIONE UNA OPCION: - " << endl;
       cout << "-------------------------" << endl;
@@ -47,6 +50,15 @@ int menuReportes(){
                  // TODO: Falta Función exportar como CSV
                  break;
                 }
+        case OPCION_RANKING_VENDEDORES:
+                {
+                 cout<<"------------------------------------------------------------------------" <<endl;
+                 cout<<"------------------RANKING MEJORES VENDEDORES -------------------------- "<<endl;
+                 cout<<"------------------------------------------------------------------------" <<endl;
+                 mostrarRankingVendedores();
+                }
+                // TODO: Agregar los montos que ganó por comisiones
+                break;
         case OPCION_SALIR_DE_MENUREPORTES:
                 return 0;
                 break;
@@ -160,6 +172,31 @@ int getIndexAnio(int anio){
         return 2;
    }
    return -1;
+}
+
+void mostrarRankingVendedores(){
+    int cant = cantDeVendedores();
+    Vendedor *vecVendedores;
+    vecVendedores = new Vendedor[cant];
+    FILE *p;
+    p=fopen("Vendedores.dat","rb");
+    if (p==NULL) return;
+    fread(vecVendedores,sizeof (Vendedor),cant,p);
+    for (int i=0;i<cant;i++){
+        for(int j=i+1;j<cant;j++){
+            if (vecVendedores[i].calculateCantVentasRealizadas()<vecVendedores[j].calculateCantVentasRealizadas()){
+                Vendedor aux;
+                aux = vecVendedores[j];
+                vecVendedores[j]=vecVendedores[i];
+                vecVendedores[i]=aux;
+            }
+        }
+    }
+    for (int k=0;k<cant;k++){
+        cout<<k+1<<"-"<<vecVendedores[k].getNombre()<<" "<<vecVendedores[k].getApellido()<<": "<< vecVendedores[k].calculateCantVentasRealizadas()<<endl;
+
+    }
+    fclose(p);
 }
 
 #endif // MENUREPORTES_CPP_INCLUDED
