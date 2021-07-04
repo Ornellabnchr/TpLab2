@@ -68,15 +68,20 @@ bool Cliente::leerDeDisco(const int pos){
         return leyo;
 }
 
+
 bool Cliente::grabarEnDisco(const int pos){
     FILE *p;
-    p=fopen("Clientes.dat","ab");
-    if (p==NULL) return false;
-    fseek(p, pos*sizeof *this, 0);
+    p=fopen("Clientes.dat","wb");
+    if (p==NULL){
+            cout<<"No se pudo abrir el archivo";
+            return false;
+     }
+    else  fseek(p, (pos)*sizeof *this, 0);
     bool escribio=fwrite(this, sizeof *this, 1, p);
     fclose(p);
     return escribio;
 }
+
 
 int Cliente::calcularCantComprasRealizadas(const int dni){
    Operacion regOperacion;

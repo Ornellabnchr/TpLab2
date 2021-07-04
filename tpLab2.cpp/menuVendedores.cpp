@@ -154,28 +154,20 @@ void buscarVendedor(){
 
 
 void changeVendedorPapelera(int pos){
-     int tam = cantDeVendedores();
-     FILE *p;
-     Vendedor regVendedor,*vecVendedor;
-     vecVendedor= new Vendedor[tam];
-     p=fopen("Vendedores.dat","rb+");
-     if (p==NULL){
-            cout<<"No se pudo abrir el archivo";
-            return;
-     }
-     fread(vecVendedor,sizeof (Vendedor),tam,p);
-     if (vecVendedor[pos].getEstado()==true){
+     Vendedor regVendedor;
+     bool leyo = regVendedor.leerDeDisco(pos);
+     if (leyo == false) return;
+     if (regVendedor.getEstado()==true){
              cout<<"El vendedor se encuentra en el registro."<<endl;
-             cout<<"Esta seguro/a que desea enviar a la papelera al vendededor/a "<< vecVendedor[pos].getNombre();
-             cout<<" "<< vecVendedor[pos].getApellido()<<"?";
-             cout<<endl<<"1-Si 2-No: ";"\n";
+             cout<<"Esta seguro/a que desea enviar a la papelera al vendededor/a "<< regVendedor.getNombre();
+             cout<<" "<< regVendedor.getApellido()<<"?";
      }
-     else if (vecVendedor[pos].getEstado()==false){
+     else if (regVendedor.getEstado()==false){
              cout<<"El vendedor se encuentra la papelera"<<endl;
-             cout<<"Esta seguro/a que desea restaurar de la papelera al vendededor/a "<< vecVendedor[pos].getNombre();
-             cout<<" "<< vecVendedor[pos].getApellido()<<"?";
-             cout<<endl<<"1-Si 2-No: ";"\n";
+             cout<<"Esta seguro/a que desea restaurar de la papelera al vendededor/a "<< regVendedor.getNombre();
+             cout<<" "<< regVendedor.getApellido()<<"?";
      }
+     cout<<endl<<"1-Si 2-No: ";"\n";
      int rta;
      cin>>rta;
      while (rta!=1 && rta!=2){
@@ -186,20 +178,23 @@ void changeVendedorPapelera(int pos){
        cout<<endl<<"Operacion cancelada.";
        return;
      }
-     if (vecVendedor[pos].getEstado()==true){
-               vecVendedor[pos].setEstado(false);
-               cout<<"El vendedor se ha enviado a la papelera"<<endl;
+     if (regVendedor.getEstado()==true){
+               regVendedor.setEstado(false);
+               cout<<endl<<"El vendedor se enviara a la papelera..."<<endl;
      }
-     else if (vecVendedor[pos].getEstado()==false){
-               vecVendedor[pos].setEstado(true);
-               cout<<"El vendedor se ha recuperado de la papelera"<<endl;
+     else if (regVendedor.getEstado()==false){
+               regVendedor.setEstado(true);
+               cout<<endl<<"El vendedor se restaurara de la papelera..."<<endl;
      }
-     fseek(p,0,0);
-     fwrite(vecVendedor,sizeof (Vendedor),tam,p);
-     fclose(p);
-     delete vecVendedor;
-     return;
+     bool escribio=regVendedor.grabarEnDisco(pos);;
+     if (escribio==false) {
+            cout<<"Proceso fallido";
+            return;
+     }
+     cout<<"Proceso exitoso";
+
 }
+
 
 
 void eliminarVendedor(int dni){
@@ -252,9 +247,6 @@ void eliminarVendedor(int dni){
      delete vecVendedor;
 
 }
-
-
-
 
 
 int cantDeVendedores(){

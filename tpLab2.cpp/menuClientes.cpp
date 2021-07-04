@@ -141,28 +141,20 @@ void buscarCliente(){
 
 
 void changeClientePapelera(int pos){
-     int tam = cantDeClientes();
-     FILE *p;
-     Cliente regCliente,*vecCliente;
-     vecCliente= new Cliente[tam];
-     p=fopen("Clientes.dat","rb+");
-     if (p==NULL){
-            cout<<"No se pudo abrir el archivo";
-            return;
+     Cliente regCliente;
+     bool leyo = regCliente.leerDeDisco(pos);
+     if (leyo == false) return;
+     if (regCliente.getEstado()==true){
+             cout<<"El Cliente se encuentra en el registro."<<endl;
+             cout<<"Esta seguro/a que desea enviar a la papelera al vendededor/a "<< regCliente.getNombre();
+             cout<<" "<< regCliente.getApellido()<<"?";
      }
-     fread(vecCliente,sizeof (Cliente),tam,p);
-     if (vecCliente[pos].getEstado()==true){
-             cout<<"El cliente se encuentra en el registro."<<endl;
-             cout<<"Esta seguro/a que desea enviar a la papelera al cliente "<< vecCliente[pos].getNombre();
-             cout<<" "<< vecCliente[pos].getApellido()<<"?";
-             cout<<endl<<"1-Si 2-No: ";"\n";
+     else if (regCliente.getEstado()==false){
+             cout<<"El Cliente se encuentra la papelera"<<endl;
+             cout<<"Esta seguro/a que desea restaurar de la papelera al vendededor/a "<< regCliente.getNombre();
+             cout<<" "<< regCliente.getApellido()<<"?";
      }
-     else if (vecCliente[pos].getEstado()==false){
-             cout<<"El cliente se encuentra la papelera"<<endl;
-             cout<<"Esta seguro/a que desea restaurar de la papelera al cliente "<< vecCliente[pos].getNombre();
-             cout<<" "<< vecCliente[pos].getApellido()<<"?";
-             cout<<endl<<"1-Si 2-No: ";"\n";
-     }
+     cout<<endl<<"1-Si 2-No: ";"\n";
      int rta;
      cin>>rta;
      while (rta!=1 && rta!=2){
@@ -173,21 +165,22 @@ void changeClientePapelera(int pos){
        cout<<endl<<"Operacion cancelada.";
        return;
      }
-     if (vecCliente[pos].getEstado()==true){
-               vecCliente[pos].setEstado(false);
-               cout<<"El cliente se ha enviado a la papelera"<<endl;
+     if (regCliente.getEstado()==true){
+               regCliente.setEstado(false);
+               cout<<endl<<"El Cliente se enviara a la papelera..."<<endl;
      }
-     else if (vecCliente[pos].getEstado()==false){
-               vecCliente[pos].setEstado(true);
-               cout<<"El cliente se ha recuperado de la papelera"<<endl;
+     else if (regCliente.getEstado()==false){
+               regCliente.setEstado(true);
+               cout<<endl<<"El Cliente se restaurara de la papelera..."<<endl;
      }
-     fseek(p,0,0);
-     fwrite(vecCliente,sizeof (Cliente),tam,p);
-     fclose(p);
-     delete vecCliente;
-     return;
-}
+     bool escribio=regCliente.grabarEnDisco(pos);
+     if (escribio==false) {
+            cout<<"Proceso fallido";
+            return;
+     }
+     cout<<"Proceso exitoso";
 
+};
 
 void eliminarCliente(int dni){
      int tam = cantDeClientes(),pos;

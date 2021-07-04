@@ -96,16 +96,17 @@ bool Vendedor::leerDeDisco(const int pos){
 
 bool Vendedor::grabarEnDisco(const int pos){
     FILE *p;
-    p=fopen("Vendedores.dat","ab");
+    p=fopen("Vendedores.dat","wb");
     if (p==NULL){
             cout<<"No se pudo abrir el archivo";
             return false;
      }
-    fseek(p, pos*sizeof *this, 0);
+    else  fseek(p, (pos)*sizeof *this, 0);
     bool escribio=fwrite(this, sizeof *this, 1, p);
     fclose(p);
     return escribio;
 }
+
 
 
 int Vendedor::calculateCantVentasRealizadas(const int dni){
