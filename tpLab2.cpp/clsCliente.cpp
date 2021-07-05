@@ -10,6 +10,10 @@ using namespace std;
 #include "validations.h"
 #include "clsOperacion.h"
 
+
+bool Cliente::getPidioCredito(){return pidioCredito;};
+void Cliente::setPidioCredito(const bool pidioCredito){this->pidioCredito=pidioCredito;};
+
 void Cliente::Mostrar(){
     if (estado==true){
             Persona::Mostrar();
@@ -31,6 +35,17 @@ void Cliente::Cargar(){
      cout <<"Ingrese el DNI: ";
      cin >> dni;"\n";
      dni= validateDniCliente(dni);
+     cout<<"\n Con fines estadisticos, responda: ¿Este cliente pidio un credito? 1- Si 2-No: ";
+     int rta;
+     cin>>rta;
+     while (rta != 1 && rta != 2){
+        cout<<endl<<"ERROR! Ingrese una opcion valida: ";
+        cin>>rta;
+     }
+     if (rta==1){
+        pidioCredito=true;
+     }
+     else pidioCredito=false;
      Cliente::cargarEnArchivo();
 }
 

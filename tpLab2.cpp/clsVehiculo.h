@@ -14,7 +14,6 @@ class Vehiculo{
         int anio;
         int stock;
         bool estado;
-        int cantVendidos;
 
     public:
         Vehiculo();
@@ -26,7 +25,6 @@ class Vehiculo{
         void setAnio(const int anio);
         void setStock(const int stock);
         void setEstado(const bool estado);
-        void setCantVendidos(const int cantVendidos);
         int getIdVehiculo();
         const char *getModelo();
         const char *getMarca();
@@ -34,7 +32,6 @@ class Vehiculo{
         int getCantPuertas();
         int getAnio();
         int getStock();
-        int getCantVendidos();
         bool getEstado();
         void Cargar();
         void Mostrar();
@@ -42,6 +39,7 @@ class Vehiculo{
         int buscarPosEnDisco(const int idVehiculo);
         bool leerDeDisco(const int pos);
         bool grabarEnDisco(const int pos);
+        int calculateCantVendidos();
 
 };
 #endif // CLSVEHICULO_H_INCLUDED

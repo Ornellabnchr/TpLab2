@@ -7,6 +7,7 @@ using namespace std;
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
+#include <ctime>
 
 #include "clsPersona.h"
 #include "funciones.h"
@@ -66,6 +67,20 @@ void Persona::Mostrar(){
    cout<<"Localidad: "<<localidad <<endl;
 
 
+}
+
+int Persona::calculateEdad(){
+     time_t t;
+     t = time(NULL);
+     struct tm *fecha;
+     fecha = localtime(&t);
+     Fecha fechaDeHoy;
+     fechaDeHoy.setDia(fecha->tm_mday);
+     fechaDeHoy.setMes(fecha->tm_mon+1);
+     fechaDeHoy.setAnio(fecha->tm_year+1900);
+     int edad = fechaDeHoy.getAnio() - fechaDeNacimiento.getAnio();
+     if (fechaDeHoy.getMes()<fechaDeNacimiento.getMes() || (fechaDeHoy.getMes()==fechaDeNacimiento.getMes() && fechaDeHoy.getDia()<fechaDeNacimiento.getDia())) edad=edad-1;
+     return edad;
 }
 
 #endif // CLSPERSONA_CPP_INCLUDED

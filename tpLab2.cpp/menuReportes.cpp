@@ -10,6 +10,7 @@ using namespace std;
 
 #include "clsOperacion.h"
 #include "menuVendedores.h"
+#include "menuVehiculos.h"
 #include "menuReportes.h"
 #include "validations.h"
 
@@ -17,6 +18,8 @@ enum MENU_REPORTES{
       OPCION_SALIR_DE_MENUREPORTES,
       OPCION_MOSTRAR_REPORTE_VENTAS,
       OPCION_RANKING_VENDEDORES,
+      OPCION_RANKING_VEHICULOS,
+      OPCION_ESTADISTICA_EDAD_Y_CREDITOS
 };
 int menuReportes(){
   setlocale(LC_ALL, "Spanish");
@@ -27,6 +30,8 @@ int menuReportes(){
       cout << "-------------------------" << endl;
       cout << "1. Reporte de ventas mes a mes" << endl;
       cout << "2. Ranking de Vendedores" << endl;
+      cout << "3. Ranking de Vehiculos más vendidos" << endl;
+      cout << "4. Estadística entre edad y crédito"<<endl;
       cout << "0. Volver al menu anterior" << endl;
       cout << "- SELECCIONE UNA OPCION: - " << endl;
       cout << "-------------------------" << endl;
@@ -58,6 +63,22 @@ int menuReportes(){
                  mostrarRankingVendedores();
                 }
                 // TODO: Agregar los montos que ganó por comisiones
+                break;
+        case OPCION_RANKING_VEHICULOS:
+                {
+                 cout<<"------------------------------------------------------------------------" <<endl;
+                 cout<<"------------------RANKING VEHICULOS MÁS VENDIDOS -----------------------"<<endl;
+                 cout<<"------------------------------------------------------------------------" <<endl;
+                 mostrarRankingVehiculos();
+                }
+                break;
+        case OPCION_ESTADISTICA_EDAD_Y_CREDITOS:
+                {
+                 cout<<"------------------------------------------------------------------------" <<endl;
+                 cout<<"------------------ESTADÍSTICAS DE CRÉDITOS SOLICITADOS------------------"<<endl;
+                 cout<<"------------------------------------------------------------------------" <<endl;
+                 mostrarEstadisticaCreditoEdad();
+                }
                 break;
         case OPCION_SALIR_DE_MENUREPORTES:
                 return 0;
@@ -197,6 +218,64 @@ void mostrarRankingVendedores(){
 
     }
     fclose(p);
+}
+
+void mostrarRankingVehiculos(){
+    int cant = cantDeVehiculos();
+    Vehiculo *vecVehiculos;
+    vecVehiculos = new Vehiculo[cant];
+    FILE *p;
+    p=fopen("Vehiculos.dat","rb");
+    if (p==NULL) return;
+    fread(vecVehiculos,sizeof (Vehiculo),cant,p);
+    for (int i=0;i<cant;i++){
+        for(int j=i+1;j<cant;j++){
+            if (vecVehiculos[i].calculateCantVendidos()<vecVehiculos[j].calculateCantVendidos()){
+                Vehiculo aux;
+                aux = vecVehiculos[j];
+                vecVehiculos[j]=vecVehiculos[i];
+                vecVehiculos[i]=aux;
+            }
+        }
+    }
+    for (int k=0;k<cant;k++){
+        cout<<k+1<<"-"<<vecVehiculos[k].getMarca()<<" "<<vecVehiculos[k].getModelo()<<": "<< vecVehiculos[k].calculateCantVendidos()<<endl;
+    }
+    fclose(p);
+}
+
+
+void mostrarEstadisticaCreditoEdad(){
+    Cliente regCliente;
+    Operacion regOperacion;
+    int ventasJoven=0,ventasMedia=0, ventasMayor=0;
+    int cantConCredito=0;
+    float porcentajeJoven=0,porcentajeMedia=0,porcentajeMayor=0;
+    FILE *p;
+    p=fopen("Operaciones.dat","rb");
+    if (p==NULL){
+      cout<<"No se pudo leer el archivo"<<endl;
+      return;
+    }
+    while (fread(&regOperacion,sizeof (Operacion),1,p)==1){
+        int pos=regCliente.buscarPosEnDisco(regOperacion.getDniCliente());
+        regCliente.leerDeDisco(pos);
+        if(regCliente.getPidioCredito()==true){
+            cantConCredito++;
+            int edad=regCliente.calculateEdad();
+            if(edad>45) ventasMayor++;
+            else if (edad<=45 && edad>=31) ventasMedia++;
+            else ventasJoven++;
+        }
+    }
+    fclose(p);
+    porcentajeJoven=float(ventasJoven)/float(cantConCredito);
+    porcentajeMedia=float(ventasMedia)/float(cantConCredito);
+    porcentajeMayor=float(ventasMayor)/float(cantConCredito);
+    cout<<"Porcentaje de ventas con crédito: "<<endl;
+    cout<<"Clientes jóvenes (entre 18 y 30 años inclusive): "<<porcentajeJoven << " ("<<ventasJoven<<" ventas)"<<endl;
+    cout<<"Clientes de edad media (entre 30 y 45 años inclusive): "<<porcentajeMedia << " ("<<ventasMedia<<" ventas)"<<endl;
+    cout<<"Clientes de mayores (más de 45 años): "<<porcentajeMayor << " ("<<ventasMayor<<" ventas)"<<endl;
 }
 
 #endif // MENUREPORTES_CPP_INCLUDED

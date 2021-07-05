@@ -8,6 +8,7 @@ using namespace std;
 #include <cstring>
 
 #include "clsVehiculo.h"
+#include "clsOperacion.h"
 #include "funciones.h"
 
 
@@ -22,7 +23,6 @@ void Vehiculo::setCantPuertas(const int cantPuertas){this->cantPuertas=cantPuert
 void Vehiculo::setAnio(const int anio){this->anio=anio;}
 void Vehiculo::setStock(const int stock){this->stock=stock;}
 void Vehiculo::setEstado(const bool estado){this->estado=estado;}
-void Vehiculo::setCantVendidos(const int cantVendidos){this->cantVendidos=cantVendidos;}
 int Vehiculo::getIdVehiculo(){return idVehiculo;}
 const char* Vehiculo::getModelo(){return modelo;}
 const char* Vehiculo::getMarca(){return marca;}
@@ -30,9 +30,9 @@ const char* Vehiculo::getColor(){return color;}
 int Vehiculo::getCantPuertas(){return cantPuertas;}
 int Vehiculo::getAnio(){return anio;}
 int Vehiculo::getStock(){return stock;}
-int Vehiculo::getCantVendidos(){return cantVendidos;}
 bool Vehiculo::getEstado(){return estado;}
 
+//TODO: Agregar validacion a la cantidad de puertas, año del modelo, Id del vehiculo
 
 
 void Vehiculo::Cargar(){
@@ -122,6 +122,19 @@ bool Vehiculo::grabarEnDisco(const int pos){
 }
 
 
-
+int Vehiculo::calculateCantVendidos(){
+   Operacion regOperacion;
+   int cantVentas=0;
+   FILE *p;
+   p=fopen("Operaciones.dat","rb");
+   if (p==NULL) return 0;
+   while(fread(&regOperacion,sizeof (Operacion),1,p)==1){
+        if(regOperacion.getIdVehiculo()==idVehiculo && regOperacion.getVentaCompleta()==true){
+            cantVentas++;
+        }
+   }
+   fclose(p);
+   return cantVentas;
+}
 
 #endif // CLSVEHICULO_CPP_INCLUDED

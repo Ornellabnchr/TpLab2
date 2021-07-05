@@ -19,7 +19,9 @@ using namespace std;
 #include "menuVehiculos.h"
 #include "menuReportes.h"
 
-
+//TODO: Cambiar estructuras de decision Si o No por una funcion
+//TODO: Cambiar metodo buscarPosEnDisco de todas las clases
+//TODO: Armar un archivo de operaciones de prueba
 
 enum MENU_MAIN{
       OPCION_SALIR,

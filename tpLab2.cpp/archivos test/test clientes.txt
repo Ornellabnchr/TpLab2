@@ -1,50 +1,48 @@
-43434343
 Lucas
 Sosa
 Esquiu 100
 Tigre
 lucas@prueba.com
 1111111111
-1745
-16
-7
 1994
+7
+16
+43434343
+1
 
-
-42445030
 Santiago
 Benitez
 Williams 200
 Tigre
 santi@prueba.com
 1134008752
-1646
-22
-7
 1999
+7
+22
+42445030
+1
 
-
-37445030
 Matías
 Juarez
 Carlos Gardel 100
 Tigre
 mati@prueba.com
 1134008752
-1646
-15
-6
 1998
+6
+14
+37445030
+2
 
-
-18445030
 Claudia
 Baldi
 Esquiu 400
 Pacheco
 clau@prueba.com
-1134008752
-1646
-15
-6
-1998
+1134008744
+1967
+4
+7
+18445030
+1
+

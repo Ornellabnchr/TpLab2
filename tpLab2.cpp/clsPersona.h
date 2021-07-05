@@ -39,6 +39,7 @@ class Persona
         char* getEmail();
         void Mostrar();
         void Cargar();
+        int calculateEdad();
 };
 
 #endif // CLSPERSONA_H_INCLUDED
