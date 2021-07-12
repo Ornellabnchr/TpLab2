@@ -96,7 +96,7 @@ bool Vendedor::leerDeDisco(const int pos){
 
 bool Vendedor::grabarEnDisco(const int pos){
     FILE *p;
-    p=fopen("Vendedores.dat","wb");
+    p=fopen("Vendedores.dat","rb+");
     if (p==NULL){
             cout<<"No se pudo abrir el archivo";
             return false;

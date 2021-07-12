@@ -15,6 +15,7 @@ bool Cliente::getPidioCredito(){return pidioCredito;};
 void Cliente::setPidioCredito(const bool pidioCredito){this->pidioCredito=pidioCredito;};
 
 void Cliente::Mostrar(){
+    // TODO: revisar metodo mostrar en el buscador por DNI
     if (estado==true){
             Persona::Mostrar();
             cout<<"Cantidad de compras realizadas: ";
@@ -86,7 +87,7 @@ bool Cliente::leerDeDisco(const int pos){
 
 bool Cliente::grabarEnDisco(const int pos){
     FILE *p;
-    p=fopen("Clientes.dat","wb");
+    p=fopen("Clientes.dat","rb+");
     if (p==NULL){
             cout<<"No se pudo abrir el archivo";
             return false;

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1625445722 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clscliente.cpp
+1626129778 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clscliente.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -8,7 +8,7 @@
 	"validations.h"
 	"clsOperacion.h"
 
-1625445662 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clscliente.h
+1626129778 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clscliente.h
 	"clsPersona.h"
 
 1625444351 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clspersona.h
@@ -39,7 +39,7 @@
 	"validations.h"
 	"clsFecha.h"
 
-1625424187 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsoperacion.cpp
+1626129778 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsoperacion.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -50,7 +50,7 @@
 	"funciones.h"
 	"menuVehiculos.h"
 
-1625407205 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\funciones.h
+1626129778 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\funciones.h
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -92,7 +92,7 @@
 	"clsOperacion.h"
 	"validations.h"
 
-1625439213 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\main.cpp
+1625446584 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -153,7 +153,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1625438539 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.cpp
+1626129778 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -194,13 +194,13 @@
 	"validations.h"
 	"rlutil.h"
 
-1625410462 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuvendedores.cpp
+1626131166 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuvendedores.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	<cstring>
 	"menuVendedores.h"
 
-1625405376 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\funciones.cpp
+1626129778 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\funciones.cpp
 	"funciones.h"
 

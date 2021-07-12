@@ -186,7 +186,7 @@ void changeVendedorPapelera(int pos){
                regVendedor.setEstado(true);
                cout<<endl<<"El vendedor se restaurara de la papelera..."<<endl;
      }
-     bool escribio=regVendedor.grabarEnDisco(pos);;
+     bool escribio=regVendedor.grabarEnDisco(pos);
      if (escribio==false) {
             cout<<"Proceso fallido";
             return;

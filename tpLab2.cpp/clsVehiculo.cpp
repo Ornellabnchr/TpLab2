@@ -110,7 +110,7 @@ bool Vehiculo::leerDeDisco(const int pos){
 
 bool Vehiculo::grabarEnDisco(const int pos){
     FILE *p;
-    p=fopen("Vehiculos.dat","ab");
+    p=fopen("Vehiculos.dat","rb+");
     if (p==NULL){
             cout<<"No se pudo abrir el archivo";
             return false;
