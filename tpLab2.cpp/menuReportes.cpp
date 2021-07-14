@@ -221,6 +221,7 @@ void mostrarRankingVendedores(){
 
     }
     fclose(p);
+    delete vecVendedores;
 }
 
 void mostrarRankingVehiculos(){
