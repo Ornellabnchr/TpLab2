@@ -197,11 +197,14 @@ int getIndexAnio(int anio){
 
 void mostrarRankingVendedores(){
     int cant = cantDeVendedores();
-    Vendedor *vecVendedores;
-    vecVendedores = new Vendedor[cant];
     FILE *p;
     p=fopen("Vendedores.dat","rb");
-    if (p==NULL) return;
+    if (p==NULL || cant==-1 ){
+       cout<<endl<<"El archivo de vendedores no existe";
+       return;
+    }
+    Vendedor *vecVendedores;
+    vecVendedores = new Vendedor[cant];
     fread(vecVendedores,sizeof (Vendedor),cant,p);
     for (int i=0;i<cant;i++){
         for(int j=i+1;j<cant;j++){
@@ -222,11 +225,14 @@ void mostrarRankingVendedores(){
 
 void mostrarRankingVehiculos(){
     int cant = cantDeVehiculos();
-    Vehiculo *vecVehiculos;
-    vecVehiculos = new Vehiculo[cant];
     FILE *p;
     p=fopen("Vehiculos.dat","rb");
-    if (p==NULL) return;
+    if (p==NULL || cant==-1){
+      cout<<endl<<"El archivo de vehiculos no existe";
+      return;
+    }
+    Vehiculo *vecVehiculos;
+    vecVehiculos = new Vehiculo[cant];
     fread(vecVehiculos,sizeof (Vehiculo),cant,p);
     for (int i=0;i<cant;i++){
         for(int j=i+1;j<cant;j++){
