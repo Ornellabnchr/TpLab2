@@ -204,7 +204,7 @@
 1626129778 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\funciones.cpp
 	"funciones.h"
 
-1625935179 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\clscliente.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\clscliente.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -212,32 +212,31 @@
 	"clsCliente.h"
 	"validations.h"
 	"clsOperacion.h"
+
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\clscliente.h
 	"clsPersona.h"
 
-1625929583 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\clscliente.h
-	"clsPersona.h"
-
-1625929583 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\clspersona.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\clspersona.h
 	"clsFecha.h"
 
-1623084002 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\clsfecha.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\clsfecha.h
 
-1623084002 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\validations.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\validations.h
 	"clsFecha.h"
 
-1623084002 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\clsoperacion.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\clsoperacion.h
 	"clsFecha.h"
 	"clsPersona.h"
 	"clsVendedor.h"
 	"clsCliente.h"
 	"clsVehiculo.h"
 
-1625929583 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\clsvendedor.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\clsvendedor.h
 	"clsPersona.h"
 
-1625929583 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\clsvehiculo.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\clsvehiculo.h
 
-1623084002 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\clsfecha.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\clsfecha.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -245,7 +244,7 @@
 	"validations.h"
 	"clsFecha.h"
 
-1625929583 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\clsoperacion.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\clsoperacion.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -256,13 +255,13 @@
 	"funciones.h"
 	"menuVehiculos.h"
 
-1623084002 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\funciones.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\funciones.h
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	<cstring>
 
-1623084002 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\menuvehiculos.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\menuvehiculos.h
 	"clsFecha.h"
 	"clsPersona.h"
 	"clsVendedor.h"
@@ -270,7 +269,7 @@
 	"clsVehiculo.h"
 	"clsOperacion.h"
 
-1625929583 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\clspersona.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\clspersona.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -280,7 +279,7 @@
 	"funciones.h"
 	"validations.h"
 
-1625929583 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\clsvehiculo.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\clsvehiculo.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -289,7 +288,7 @@
 	"clsOperacion.h"
 	"funciones.h"
 
-1625929583 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\clsvendedor.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\clsvendedor.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -298,10 +297,10 @@
 	"clsOperacion.h"
 	"validations.h"
 
-1625929583 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\funciones.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\funciones.cpp
 	"funciones.h"
 
-1625929583 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\main.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -319,9 +318,9 @@
 	"menuVehiculos.h"
 	"menuReportes.h"
 
-1623084002 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\menuventas.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\menuventas.h
 
-1623084002 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\menuclientes.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\menuclientes.h
 	"clsFecha.h"
 	"clsPersona.h"
 	"clsVendedor.h"
@@ -329,7 +328,7 @@
 	"clsVehiculo.h"
 	"clsOperacion.h"
 
-1625929583 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\menuvendedores.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\menuvendedores.h
 	"clsFecha.h"
 	"clsPersona.h"
 	"clsVendedor.h"
@@ -337,9 +336,9 @@
 	"clsVehiculo.h"
 	"clsOperacion.h"
 
-1625929583 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\menureportes.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\menureportes.h
 
-1625929583 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\menuclientes.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\menuclientes.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -348,7 +347,7 @@
 	"menuClientes.h"
 	"validations.h"
 
-1623084002 c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\rlutil.h
+1626310229 c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\rlutil.h
 	<iostream>
 	<string>
 	<cstdio>
@@ -362,21 +361,33 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1625929583 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\menuvehiculos.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\menureportes.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<cstring>
+	<iomanip>
+	"clsOperacion.h"
+	"menuVendedores.h"
+	"menuVehiculos.h"
+	"menuReportes.h"
+	"validations.h"
+
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\menuvehiculos.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	<cstring>
 	"menuVehiculos.h"
 
-1625929583 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\menuvendedores.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\menuvendedores.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	<cstring>
 	"menuVendedores.h"
 
-1623084002 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\menuventas.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\menuventas.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -385,7 +396,7 @@
 	"clsOperacion.h"
 	"menuVentas.h"
 
-1625929583 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\validations.cpp
+1626310229 source:c:\users\orneb\onedrive\documentos\github\tp-laboratorio2\tplab2\tplab2.cpp\validations.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -397,16 +408,4 @@
 	"clsOperacion.h"
 	"validations.h"
 	"rlutil.h"
-
-1625930241 source:c:\users\orneb\onedrive\documentos\github\tplab2\tplab2.cpp\menureportes.cpp
-	<iostream>
-	<cstdlib>
-	<cstdio>
-	<cstring>
-	<iomanip>
-	"clsOperacion.h"
-	"menuVendedores.h"
-	"menuVehiculos.h"
-	"menuReportes.h"
-	"validations.h"
 

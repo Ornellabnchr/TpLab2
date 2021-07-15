@@ -9,7 +9,6 @@ using namespace std;
 #include "clsCliente.h"
 #include "validations.h"
 #include "clsOperacion.h"
-#include "clsPersona.h"
 
 
 bool Cliente::getPidioCredito(){return pidioCredito;};
@@ -61,14 +60,17 @@ void Cliente::cargarEnArchivo(){
 }
 
 int Cliente::buscarPosEnDisco(const int dni){
-Cliente reg;
-      int c=0,pos=0;
-      while(leerDeDisco(pos++)){
-         if(reg.getDni()==dni){
+      FILE *p;
+      p=fopen("Clientes.dat","rb");
+      if (p==NULL) return -1;
+      int c=0,pos=-1;
+      while(fread(this,sizeof (Cliente),1,p)==1){
+         if(this->dni==dni){
                 pos=c;
          }
           c++;
       }
+      fclose(p);
       return pos;
 }
 
@@ -114,12 +116,15 @@ int Cliente::calcularCantComprasRealizadas(const int dni){
 
 void Cliente::mostrarAutosAsociados(const int dni){
    Operacion regOperacion;
-   int pos=0;
-   while(leerDeDisco(pos++)){
+   FILE *p;
+   p=fopen("Operaciones.dat","rb");
+   if (p==NULL) return;
+   while(fread(&regOperacion,sizeof (Operacion),1,p)==1){
         if(regOperacion.getDniCliente()==dni){
             cout<<endl<< "Patente: "<<regOperacion.getDominioVehiculo();
         }
    }
+   fclose(p);
 };
 
 

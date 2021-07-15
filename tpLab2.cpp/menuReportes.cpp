@@ -66,11 +66,8 @@ int menuReportes(){
                 break;
         case OPCION_RANKING_VEHICULOS:
                 {
-
-                 cout<<"------------------RANKING VEHICULOS MÁS VENDIDOS -----------------------"<<endl;
-
+                 cout<<"------------------------------------------------------------------------" <<endl;
                  cout<<"------------------RANKING VEHICULOS MÃS VENDIDOS -----------------------"<<endl;
-
                  cout<<"------------------------------------------------------------------------" <<endl;
                  mostrarRankingVehiculos();
                 }
