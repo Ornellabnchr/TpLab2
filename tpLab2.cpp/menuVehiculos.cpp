@@ -215,7 +215,6 @@ int cantDeVehiculos(){
       Vehiculo regVehiculo;
       p=fopen("Vehiculos.dat","rb");
       if (p==NULL){
-            cout<<"No se pudo abrir el archivo";
             return -1;
       }
       fseek(p,0,2);

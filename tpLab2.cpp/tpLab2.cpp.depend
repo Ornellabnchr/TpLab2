@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1626129778 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clscliente.cpp
+1626131749 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clscliente.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -74,7 +74,7 @@
 	"funciones.h"
 	"validations.h"
 
-1625438424 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsvehiculo.cpp
+1626131861 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsvehiculo.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -83,7 +83,7 @@
 	"clsOperacion.h"
 	"funciones.h"
 
-1625428127 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsvendedor.cpp
+1626131831 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\clsvendedor.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -128,7 +128,7 @@
 	"clsVehiculo.h"
 	"clsOperacion.h"
 
-1625444962 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.h
+1626305467 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.h
 
 1625410977 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuclientes.cpp
 	<iostream>
@@ -153,7 +153,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1626129778 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.cpp
+1626305684 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -194,7 +194,7 @@
 	"validations.h"
 	"rlutil.h"
 
-1626131166 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuvendedores.cpp
+1626305767 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuvendedores.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
