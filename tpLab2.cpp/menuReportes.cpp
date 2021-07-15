@@ -30,8 +30,8 @@ int menuReportes(){
       cout << "-------------------------" << endl;
       cout << "1. Reporte de ventas mes a mes" << endl;
       cout << "2. Ranking de Vendedores" << endl;
-      cout << "3. Ranking de Vehiculos más vendidos" << endl;
-      cout << "4. Estadística entre edad y crédito"<<endl;
+      cout << "3. Ranking de Vehiculos mÃ¡s vendidos" << endl;
+      cout << "4. EstadÃ­stica entre edad y crÃ©dito"<<endl;
       cout << "0. Volver al menu anterior" << endl;
       cout << "- SELECCIONE UNA OPCION: - " << endl;
       cout << "-------------------------" << endl;
@@ -52,7 +52,7 @@ int menuReportes(){
                        cin>>anio; "\n";
                  }
                  ventasPorMes(anio, indexAnio);
-                 // TODO: Falta Función exportar como CSV
+                 // TODO: Falta FunciÃ³n exportar como CSV
                  break;
                 }
         case OPCION_RANKING_VENDEDORES:
@@ -62,12 +62,14 @@ int menuReportes(){
                  cout<<"------------------------------------------------------------------------" <<endl;
                  mostrarRankingVendedores();
                 }
-                // TODO: Agregar los montos que ganó por comisiones
+                // TODO: Agregar los montos que ganÃ³ por comisiones
                 break;
         case OPCION_RANKING_VEHICULOS:
                 {
-                 cout<<"------------------------------------------------------------------------" <<endl;
+
                  cout<<"------------------RANKING VEHICULOS MÁS VENDIDOS -----------------------"<<endl;
+
+                 cout<<"------------------RANKING VEHICULOS MÃS VENDIDOS -----------------------"<<endl;
 
                  cout<<"------------------------------------------------------------------------" <<endl;
                  mostrarRankingVehiculos();
@@ -76,7 +78,7 @@ int menuReportes(){
         case OPCION_ESTADISTICA_EDAD_Y_CREDITOS:
                 {
                  cout<<"------------------------------------------------------------------------" <<endl;
-                 cout<<"------------------ESTADÍSTICAS DE CRÉDITOS SOLICITADOS------------------"<<endl;
+                 cout<<"------------------ESTADÃSTICAS DE CRÃ‰DITOS SOLICITADOS------------------"<<endl;
                  cout<<"------------------------------------------------------------------------" <<endl;
                  mostrarEstadisticaCreditoEdad();
                 }
@@ -195,7 +197,28 @@ int getIndexAnio(int anio){
    }
    return -1;
 }
+ float calculateCantMontos(int dn){
+   Operacion regOperacion;
+   int cantVentas=0;
+   int pos=0;
+  while(regOperacion.leerDeDisco(pos++)){
+        if(regOperacion.getDniVendedor()==dn && regOperacion.getVentaCompleta()==true){
+            cantVentas+=regOperacion.getMonto();
+        }
+   }
+   return cantVentas;
+}
 
+
+void mostrarMontosVendedores(Vendedor *vecV, int cant){
+    Vendedor reg;
+    int pos=0;
+    for(int i=0;i<cant;i++){
+           float montos=calculateCantMontos(vecV[i].getDni());
+                   cout<<i+1<<"-"<<vecV[i].getNombre()<<" "<<vecV[i].getApellido()<<": "<< vecV[i].calculateCantVentasRealizadas()<<"   |   Monto Total Recaudado (Comisiones): "<< ((montos*vecV[i].getComisionPorcentaje())/ 100)<<endl;
+
+    }
+}
 void mostrarRankingVendedores(){
     int cant = cantDeVendedores();
     Vendedor *vecVendedores;
@@ -214,10 +237,11 @@ void mostrarRankingVendedores(){
             }
         }
     }
-    for (int k=0;k<cant;k++){
+/*    for (int k=0;k<cant;k++){
         cout<<k+1<<"-"<<vecVendedores[k].getNombre()<<" "<<vecVendedores[k].getApellido()<<": "<< vecVendedores[k].calculateCantVentasRealizadas()<<endl;
 
-    }
+    }*/
+      mostrarMontosVendedores(vecVendedores,cant);
     fclose(p);
 }
 
@@ -273,10 +297,10 @@ void mostrarEstadisticaCreditoEdad(){
     porcentajeJoven=float(ventasJoven)/float(cantConCredito);
     porcentajeMedia=float(ventasMedia)/float(cantConCredito);
     porcentajeMayor=float(ventasMayor)/float(cantConCredito);
-    cout<<"Porcentaje de ventas con crédito: "<<endl;
-    cout<<"Clientes jóvenes (entre 18 y 30 años inclusive): "<<porcentajeJoven << " ("<<ventasJoven<<" ventas)"<<endl;
-    cout<<"Clientes de edad media (entre 30 y 45 años inclusive): "<<porcentajeMedia << " ("<<ventasMedia<<" ventas)"<<endl;
-    cout<<"Clientes de mayores (más de 45 años): "<<porcentajeMayor << " ("<<ventasMayor<<" ventas)"<<endl;
+    cout<<"Porcentaje de ventas con crÃ©dito: "<<endl;
+    cout<<"Clientes jÃ³venes (entre 18 y 30 aÃ±os inclusive): "<<porcentajeJoven << " ("<<ventasJoven<<" ventas)"<<endl;
+    cout<<"Clientes de edad media (entre 30 y 45 aÃ±os inclusive): "<<porcentajeMedia << " ("<<ventasMedia<<" ventas)"<<endl;
+    cout<<"Clientes de mayores (mÃ¡s de 45 aÃ±os): "<<porcentajeMayor << " ("<<ventasMayor<<" ventas)"<<endl;
 }
 
 #endif // MENUREPORTES_CPP_INCLUDED
