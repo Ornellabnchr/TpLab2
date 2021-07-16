@@ -24,7 +24,6 @@ using namespace rlutil;
 
 //TODO: Cambiar estructuras de decision Si o No por una funcion
 //TODO: Cambiar metodo buscarPosEnDisco de todas las clases
-//TODO: Dar estilos a todos los menus
 
 enum MENU_MAIN{
       OPCION_SALIR,
@@ -86,7 +85,5 @@ int main(){
                 break;
       }
     }
-
-
   return 0;
 }
