@@ -8,6 +8,10 @@
 #include <iomanip>
 using namespace std;
 
+#include "rlutil.h"
+using namespace rlutil;
+
+#include "funciones.h"
 #include "clsOperacion.h"
 #include "menuVendedores.h"
 #include "menuVehiculos.h"
@@ -22,21 +26,30 @@ enum MENU_REPORTES{
       OPCION_ESTADISTICA_EDAD_Y_CREDITOS
 };
 int menuReportes(){
-  setlocale(LC_ALL, "Spanish");
   int opc;
   while(true){
-      system("cls");
-      cout << "-----MENU REPORTES-----" << endl;
-      cout << "-------------------------" << endl;
+      cls();
+      gotoxy(55,4);
+      cout << "MENU REPORTES" << endl;
+      LINEA_EN_X(40,86,6,7);
+      LINEA_EN_X(40,86,16,7);
+      LINEA_EN_Y(6,17,39,7);
+      LINEA_EN_Y(6,17,86,7);
+      gotoxy(45,8);
       cout << "1. Reporte de ventas mes a mes" << endl;
+      gotoxy(45,9);
       cout << "2. Ranking de Vendedores" << endl;
-      cout << "3. Ranking de Vehiculos más vendidos" << endl;
-      cout << "4. Estadística entre edad y crédito"<<endl;
+      gotoxy(45,10);
+      cout << "3. Ranking de Vehiculos mas vendidos" << endl;
+      gotoxy(45,11);
+      cout << "4. Estadistica entre edad y credito"<<endl;
+      gotoxy(45,12);
       cout << "0. Volver al menu anterior" << endl;
-      cout << "- SELECCIONE UNA OPCION: - " << endl;
-      cout << "-------------------------" << endl;
+      gotoxy(50,19);
+      cout << "SELECCIONE UNA OPCION: " << endl;
+      gotoxy(72,19);
       cin>>opc;
-      system("cls");
+      cls();
       switch(opc){
         case OPCION_MOSTRAR_REPORTE_VENTAS:
                 {
@@ -52,7 +65,6 @@ int menuReportes(){
                        cin>>anio; "\n";
                  }
                  ventasPorMes(anio, indexAnio);
-                 // TODO: Falta Función exportar como CSV
                  break;
                 }
         case OPCION_RANKING_VENDEDORES:
@@ -62,7 +74,6 @@ int menuReportes(){
                  cout<<"------------------------------------------------------------------------" <<endl;
                  mostrarRankingVendedores();
                 }
-                // TODO: Agregar los montos que ganó por comisiones
                 break;
         case OPCION_RANKING_VEHICULOS:
                 {

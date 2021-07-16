@@ -50,7 +50,7 @@
 	"funciones.h"
 	"menuVehiculos.h"
 
-1626129778 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\funciones.h
+1626393141 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\funciones.h
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -92,11 +92,12 @@
 	"clsOperacion.h"
 	"validations.h"
 
-1625446584 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\main.cpp
+1626396539 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	<cstring>
+	"rlutil.h"
 	"funciones.h"
 	"clsFecha.h"
 	"clsPersona.h"
@@ -128,14 +129,15 @@
 	"clsVehiculo.h"
 	"clsOperacion.h"
 
-1626305467 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.h
+1626307758 c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.h
 
-1625410977 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuclientes.cpp
+1626396322 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuclientes.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	<cstring>
 	"rlutil.h"
+	"funciones.h"
 	"menuClientes.h"
 	"validations.h"
 
@@ -153,30 +155,36 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1626305684 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.cpp
+1626396712 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menureportes.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	<cstring>
 	<iomanip>
+	"rlutil.h"
+	"funciones.h"
 	"clsOperacion.h"
 	"menuVendedores.h"
 	"menuVehiculos.h"
 	"menuReportes.h"
 	"validations.h"
 
-1625438195 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuvehiculos.cpp
+1626396799 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuvehiculos.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	<cstring>
+	"rlutil.h"
+	"funciones.h"
 	"menuVehiculos.h"
 
-1625404409 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuventas.cpp
+1626397093 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuventas.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	<cstring>
+	"rlutil.h"
+	"funciones.h"
 	"clsFecha.h"
 	"clsOperacion.h"
 	"menuVentas.h"
@@ -194,13 +202,17 @@
 	"validations.h"
 	"rlutil.h"
 
-1626305767 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuvendedores.cpp
+1626396607 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\menuvendedores.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	<cstring>
+	"rlutil.h"
+	"funciones.h"
 	"menuVendedores.h"
 
-1626129778 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\funciones.cpp
+1626396512 source:c:\users\facundo\desktop\proyecto grupal concesionaria\tplab2\tplab2.cpp\funciones.cpp
+	<windows.h>
 	"funciones.h"
+	"rlutil.h"
 

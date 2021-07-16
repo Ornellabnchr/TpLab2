@@ -6,9 +6,11 @@ using namespace std;
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
+
 #include "rlutil.h"
 using namespace rlutil;
 
+#include "funciones.h"
 #include "menuClientes.h"
 #include "validations.h"
 
@@ -26,17 +28,28 @@ enum MENU_CLIENTES{
 int menuClientes(){
    int opc;
   while(true){
-      system("cls");
-      cout << "-----MENU CLIENTES-----" << endl;
-      cout << "-------------------------" << endl;
+      cls();
+      gotoxy(55,4);
+      cout << "MENU CLIENTES" << endl;
+      LINEA_EN_X(40,86,6,4);
+      LINEA_EN_X(40,86,16,4);
+      LINEA_EN_Y(6,17,39,4);
+      LINEA_EN_Y(6,17,86,4);
+      gotoxy(45,8);
       cout << "1. Cargar cliente" << endl;
+      gotoxy(45,9);
       cout << "2. Ver listado de clientes" << endl;
+      gotoxy(45,10);
       cout << "3. Buscar cliente por DNI" << endl;
-      cout << "4. Borrar/Recuperar cliente de Papelera de reciclaje"<< endl;
+      gotoxy(45,11);
+      cout << "4. Borrar/Recuperar cliente de Papelera"<< endl;
+      gotoxy(45,12);
       cout << "5. Borrar un cliente de forma permanente"<< endl;
+      gotoxy(45,13);
       cout << "0. Volver al menu anterior" << endl;
-      cout << "- SELECCIONE UNA OPCION: - " << endl;
-      cout << "-------------------------" << endl;
+      gotoxy(50,19);
+      cout << "SELECCIONE UNA OPCION: " << endl;
+      gotoxy(72,19);
       cin>>opc;
       system("cls");
       switch(opc){

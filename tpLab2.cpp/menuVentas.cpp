@@ -7,6 +7,10 @@ using namespace std;
 #include <cstdio>
 #include <cstring>
 
+#include "rlutil.h"
+using namespace rlutil;
+
+#include "funciones.h"
 #include "clsFecha.h"
 #include "clsOperacion.h"
 #include "menuVentas.h"
@@ -21,16 +25,24 @@ enum MENU_VENTAS{
 int menuVentas(){
   int opc;
   while(true){
-      system("cls");
-      cout << "-----MENU VENTAS-----" << endl;
-      cout << "-------------------------" << endl;
+      cls();
+      gotoxy(55,4);
+      cout << "MENU VENTAS" << endl;
+      LINEA_EN_X(40,86,6,5);
+      LINEA_EN_X(40,86,16,5);
+      LINEA_EN_Y(6,17,39,5);
+      LINEA_EN_Y(6,17,86,5);
+      gotoxy(45,8);
       cout << "1. Cargar venta" << endl;
-      cout << "2. Ver listado de operaciones" << endl;
+      gotoxy(45,9);
+      cout << "2. Ver listado de operaciones" << endl; //TODO: Crear una opción de actualizar estado de una venta
+      gotoxy(45,10);
       cout << "0. Volver al menu anterior" << endl;
-      cout << "- SELECCIONE UNA OPCION: - " << endl;
-      cout << "-------------------------" << endl;
+      gotoxy(50,19);
+      cout << "SELECCIONE UNA OPCION: " << endl;
+      gotoxy(72,19);
       cin>>opc;
-      system("cls");
+      cls();
       switch(opc){
         case OPCION_CARGAR_VENTA:
                    {

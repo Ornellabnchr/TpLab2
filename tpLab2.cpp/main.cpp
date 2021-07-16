@@ -4,6 +4,9 @@ using namespace std;
 #include <cstdio>
 #include <cstring>
 
+#include "rlutil.h"
+using namespace rlutil;
+
 #include "funciones.h"
 
 #include "clsFecha.h"
@@ -21,7 +24,7 @@ using namespace std;
 
 //TODO: Cambiar estructuras de decision Si o No por una funcion
 //TODO: Cambiar metodo buscarPosEnDisco de todas las clases
-//TODO: Armar un archivo de operaciones de prueba
+//TODO: Dar estilos a todos los menus
 
 enum MENU_MAIN{
       OPCION_SALIR,
@@ -36,19 +39,30 @@ int main(){
   setlocale(LC_ALL, "Spanish");
   int opc;
   while(true){
-      system("cls");
-      cout << "-----MENU PRINCIPAL-----" << endl;
-      cout << "-------------------------" << endl;
+      cls();
+      gotoxy(55,4);
+      cout << "MENU PRINCIPAL" << endl;
+      LINEA_EN_X(40,86,6,9);
+      LINEA_EN_X(40,86,16,9);
+      LINEA_EN_Y(6,17,39,9);
+      LINEA_EN_Y(6,17,86,9);
+      gotoxy(45,8);
       cout << "1. Gestionar ventas" << endl;
+      gotoxy(45,9);
       cout << "2. Gestionar clientes" << endl;
+      gotoxy(45,10);
       cout << "3. Gestionar vendedores" << endl;
+      gotoxy(45,11);
       cout << "4. Gestionar vehiculos" << endl;
+      gotoxy(45,12);
       cout << "5. Reportes" << endl;
+      gotoxy(45,13);
       cout << "0. Cerrar" << endl;
-      cout << "- SELECCIONE UNA OPCION: - " << endl;
-      cout << "-------------------------" << endl;
+      gotoxy(50,19);
+      cout << "SELECCIONE UNA OPCION:  " << endl;
+      gotoxy(72,19);
       cin>>opc;
-      system("cls");
+      cls();
       switch(opc){
         case OPCION_VENTAS:
                 menuVentas();

@@ -7,5 +7,7 @@ using namespace std;
 #include <cstring>
 
 void cargarCadena(char *pal, int tam);
+void LINEA_EN_Y(int,int,int,int);
+void LINEA_EN_X(int,int,int,int);
 
 #endif // FUNCIONES_H_INCLUDED

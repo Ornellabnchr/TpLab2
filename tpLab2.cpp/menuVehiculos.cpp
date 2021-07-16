@@ -7,6 +7,10 @@ using namespace std;
 #include <cstdio>
 #include <cstring>
 
+#include "rlutil.h"
+using namespace rlutil;
+
+#include "funciones.h"
 #include "menuVehiculos.h"
 
 enum MENU_VEHICULOS{
@@ -21,19 +25,30 @@ enum MENU_VEHICULOS{
 int menuVehiculos(){
   int opc;
   while(true){
-      system("cls");
-      cout << "-----MENU VEHICULOS-----" << endl;
-      cout << "-------------------------" << endl;
+      cls();
+      gotoxy(55,4);
+      cout << "MENU VEHICULOS" << endl;
+      LINEA_EN_X(40,86,6,6);
+      LINEA_EN_X(40,86,16,6);
+      LINEA_EN_Y(6,17,39,6);
+      LINEA_EN_Y(6,17,86,6);
+      gotoxy(45,8);
       cout << "1. Cargar nuevo vehiculo" << endl;
+      gotoxy(45,9);
       cout << "2. Ver lista de vehiculos disponibles" << endl;
+      gotoxy(45,10);
       cout << "3. Revisar stock por ID" << endl;
+      gotoxy(45,11);
       cout << "4. Borrar un vehiculo"<< endl;
+      gotoxy(45,12);
       cout << "5. Agregar stock a un vehiculo"<< endl;
+      gotoxy(45,13);
       cout << "0. Volver al menu anterior" << endl;
-      cout << "- SELECCIONE UNA OPCION: - " << endl;
-      cout << "-------------------------" << endl;
+      gotoxy(50,19);
+      cout << "SELECCIONE UNA OPCION: " << endl;
+      gotoxy(72,19);
       cin>>opc;
-      system("cls");
+      cls();
       switch(opc){
         case OPCION_CARGAR_VEHICULO:
                 {

@@ -7,6 +7,10 @@ using namespace std;
 #include <cstdio>
 #include <cstring>
 
+#include "rlutil.h"
+using namespace rlutil;
+
+#include "funciones.h"
 #include "menuVendedores.h"
 
 enum MENU_VENDEDORES{
@@ -23,20 +27,32 @@ enum MENU_VENDEDORES{
 int menuVendedores(){
   int opc;
   while(true){
-      system("cls");
-      cout << "-----MENU VENDEDORES-----" << endl;
-      cout << "-------------------------" << endl;
+      cls();
+      gotoxy(55,4);
+      cout << "MENU VENDEDORES" << endl;
+      LINEA_EN_X(40,86,6,8);
+      LINEA_EN_X(40,86,16,8);
+      LINEA_EN_Y(6,17,39,8);
+      LINEA_EN_Y(6,17,86,8);
+      gotoxy(45,8);
       cout << "1. Cargar vendedor" << endl;
+      gotoxy(45,9);
       cout << "2. Ver listado de vendedores" << endl;
+      gotoxy(45,10);
       cout << "3. Buscar vendedor por DNI" << endl;
+      gotoxy(45,11);
       cout << "4. Actualizar sueldo de vendedores" << endl;
-      cout << "5. Borrar/Recuperar vendedor de Papelera de reciclaje"<< endl;
+      gotoxy(45,12);
+      cout << "5. Borrar/Recuperar vendedor de Papelera"<< endl;
+      gotoxy(45,13);
       cout << "6. Borrar un vendedor de forma permanente"<< endl;
+      gotoxy(45,14);
       cout << "0. Volver al menu anterior" << endl;
-      cout << "- SELECCIONE UNA OPCION: - " << endl;
-      cout << "-------------------------" << endl;
+      gotoxy(50,19);
+      cout << "SELECCIONE UNA OPCION: " << endl;
+      gotoxy(72,19);
       cin>>opc;
-      system("cls");
+      cls();
       switch(opc){
         case OPCION_CARGAR_VENDEDOR:
                 {
